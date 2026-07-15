@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="250" viewBox="0 0 880 250" font-family="'Quicksand','Comic Sans MS','Trebuchet MS',sans-serif">
+  <defs>
+    <linearGradient id="ph" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF8EE"/><stop offset="1" stop-color="#FBF2E3"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="880" height="250" rx="20" fill="url(#ph)" stroke="#EBDAC2" stroke-width="2"/>
+
+  <!-- title -->
+  <rect x="38" y="26" width="176" height="26" rx="8" fill="#F6C6D5" opacity="0.55"/>
+  <text x="46" y="47" font-size="26" font-weight="700" fill="#6E5A93">how it works</text>
+
+  <!-- connectors -->
+  <path d="M196 128 C250 128 250 116 300 116" fill="none" stroke="#D8C7B4" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M196 128 C250 128 250 184 300 184" fill="none" stroke="#D8C7B4" stroke-width="2.4" stroke-linecap="round"/>
+
+  <!-- your message node -->
+  <rect x="46" y="104" width="150" height="48" rx="14" fill="#F1ECFC" stroke="#DED0F2" stroke-width="1.5"/>
+  <text x="121" y="134" text-anchor="middle" font-size="16.5" font-weight="700" fill="#6E5A93">your message</text>
+
+  <!-- card A: safety net -->
+  <rect x="300" y="88" width="536" height="56" rx="14" fill="#E4EEFB" stroke="#CFE0F5" stroke-width="1.5"/>
+  <rect x="314" y="99" width="34" height="34" rx="11" fill="#CDDCF3"/>
+  <path d="M331 105 l11 4 v7 c0 8 -11 12 -11 12 c0 0 -11 -4 -11 -12 v-7 z" fill="#6E93C8"/>
+  <text x="356" y="122" font-size="14.5"><tspan font-weight="700" fill="#4E6088">Safety net</tspan><tspan fill="#7C8AA6"> — every raw line is copied to _inbox.md.</tspan></text>
+
+  <!-- card B: smart filing -->
+  <rect x="300" y="156" width="536" height="56" rx="14" fill="#E6F5EE" stroke="#CDEBD8" stroke-width="1.5"/>
+  <rect x="314" y="167" width="34" height="34" rx="11" fill="#CFECDA"/>
+  <path d="M331 172 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z" fill="#5FA97F"/>
+  <text x="356" y="190" font-size="14.5"><tspan font-weight="700" fill="#3F7A5A">Smart filing</tspan><tspan fill="#6E8A7A"> — sorted into the right note, with a reply.</tspan></text>
+
+  <!-- footer -->
+  <text x="46" y="234" font-size="14.5" fill="#B0A08F">if the smart part ever slips, the safety net already has the original — so nothing is lost.</text>
+</svg>

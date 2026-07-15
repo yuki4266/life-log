@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" font-family="'Quicksand','Comic Sans MS','Trebuchet MS',sans-serif">
+  <defs>
+    <linearGradient id="pf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF8EE"/><stop offset="1" stop-color="#FBF2E3"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="880" height="300" rx="20" fill="url(#pf)" stroke="#EBDAC2" stroke-width="2"/>
+
+  <!-- title -->
+  <rect x="38" y="30" width="288" height="26" rx="8" fill="#B7E3D0" opacity="0.55"/>
+  <text x="46" y="51" font-size="26" font-weight="700" fill="#6E5A93">it's all plain files — yours</text>
+
+  <!-- row 1 -->
+  <rect x="44" y="86" width="322" height="30" rx="8" fill="#EFEAF4" stroke="#E1D6EC" stroke-width="1.3"/>
+  <text x="58" y="106" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#6E5A77">work.md · health.md · mood.md · …</text>
+  <text x="386" y="106" font-size="16" fill="#8A7B72">your entries, one tidy line each</text>
+
+  <!-- row 2 -->
+  <rect x="44" y="130" width="118" height="30" rx="8" fill="#EFEAF4" stroke="#E1D6EC" stroke-width="1.3"/>
+  <text x="58" y="150" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#6E5A77">_inbox.md</text>
+  <text x="386" y="150" font-size="16" fill="#8A7B72">raw backup of every message — nothing gets lost</text>
+
+  <!-- row 3 -->
+  <rect x="44" y="174" width="104" height="30" rx="8" fill="#EFEAF4" stroke="#E1D6EC" stroke-width="1.3"/>
+  <text x="58" y="194" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#6E5A77">reviews/</text>
+  <text x="386" y="194" font-size="16" fill="#8A7B72">your month &amp; week look-backs</text>
+
+  <!-- row 4 -->
+  <rect x="44" y="218" width="126" height="30" rx="8" fill="#EFEAF4" stroke="#E1D6EC" stroke-width="1.3"/>
+  <text x="58" y="238" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13.5" fill="#6E5A77">CLAUDE.md</text>
+  <text x="386" y="238" font-size="16" fill="#8A7B72">the rules — edit to add a category or change tone</text>
+
+  <!-- footer -->
+  <text x="46" y="278" font-size="14.5" fill="#B0A08F">all markdown, on your disk — grep it, edit it in Obsidian, delete it. it's just text.</text>
+</svg>

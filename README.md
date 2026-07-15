@@ -16,7 +16,7 @@
 
 <br>
 
-<img src="assets/demo.svg" alt="a cozy chat — a takeout grumble is tucked into money and mood notes with a gentle suggestion, and a shipped feature is logged as a win" width="90%">
+<img src="assets/demo.svg" alt="A cozy chat: a takeout grumble is tucked into money.md and mood.md with a gentle suggestion, and a shipped feature is logged as a win." width="90%">
 
 <sub>💛 Example only — not real entries.</sub>
 
@@ -40,59 +40,35 @@
 /life-log:setup
 ```
 
-That's your whole diary: 8 notes, the recording rules, and a safety-net backup. It never overwrites anything.
-
 **3 · Just talk.** Whatever you say in that folder gets sorted, dated, filed, and answered. You never say "log this."
 
 **4 · Look back** — anytime:
 
 ```text
-/life-log:review          # this month  (or: last week / June)
+/life-log:review
 ```
 
-<sub>Needs Claude Code · `jq` optional (falls back to perl).</sub>
+<sub>Needs Claude Code · <code>jq</code> optional (falls back to perl).</sub>
 
-## 🗂️ It's all plain files — yours
+## 🗂️ What you get
 
-| file | what's inside |
-|---|---|
-| `work.md` · `health.md` · `mood.md` · … | your entries, one tidy line each |
-| `_inbox.md` | raw backup of every message — nothing gets lost |
-| `reviews/` | your month & week look-backs |
-| `CLAUDE.md` | the rules — edit to add a category or change the tone |
+<div align="center">
 
-All markdown, on your disk. Grep it, edit it in Obsidian, delete it — it's just text.
+<img src="assets/files.svg" alt="Your diary is plain markdown files: work.md / health.md / mood.md hold your entries, one tidy line each; _inbox.md is a raw backup of every message so nothing gets lost; reviews/ holds your month and week look-backs; CLAUDE.md holds the rules you can edit to add a category or change the tone. All markdown, on your disk." width="100%">
 
-## 💛 Why it's nice
+<br><br>
 
-- 💬 **Talk, don't fill forms** — a complaint, a note, mid-sentence.
-- 🗂️ **Auto-sorted & dated** — the right note, one clean line.
-- 💡 **It answers back** — a gentle suggestion when it helps, quiet when it doesn't.
-- 🕸️ **Never loses a word** — every message is backed up before it's filed.
-- 🔒 **Yours alone** — local markdown. No cloud, no account, no tracking.
+<img src="assets/why.svg" alt="Why it's nice: talk instead of filling forms; entries are auto-sorted and dated into one clean line; it answers back with a gentle suggestion when it helps; it never loses a word because every message is backed up before it's filed; it's yours alone — local markdown, no cloud, no account, no tracking." width="100%">
 
-## 🧩 What's inside
-
-| skill | what it does |
-|---|---|
-| `/life-log:setup` | set up a new diary folder |
-| `/life-log:log` | the auto-filing (runs on its own) |
-| `/life-log:review` | read a month back to you, with suggestions |
+</div>
 
 ## 🔧 How it works
 
-Two little layers, so your words are both **safe** and **sorted**:
+<div align="center">
 
-```text
-your message ─┬─► 🕸️ safety net  ·  a hook copies the raw line to _inbox.md (never fails)
-              └─► 🧠 smart filing  ·  Claude sorts it into the right note, then replies
-```
+<img src="assets/flow.svg" alt="Two layers. A safety-net hook copies every raw message to _inbox.md and never fails. Smart filing sorts each message into the right note and replies. If the smart part ever slips, the safety net already has the original, so nothing is lost." width="100%">
 
-If the smart part ever slips, the safety net already has the original. That's why nothing gets lost.
-
-## 🔒 Privacy
-
-Plain markdown on your machine — no cloud, no account, no telemetry. The hook only runs in folders you've set up. Your diary belongs to you completely.
+</div>
 
 ## License
 
