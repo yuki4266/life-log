@@ -12,25 +12,13 @@
 
 ![life-log demo — a takeout complaint gets filed into money.md and mood.md with a suggestion; a shipped feature gets logged as a win](assets/demo.svg)
 
-*Example only — not real entries.* One message can land in more than one note. You never say "log this." It just happens.
+*Example only — not real entries.*
 
-## The problem
+## How to use
 
-Journaling apps demand a ritual: open the app, pick a template, fill the fields, tag it, save it. By the time you've done all that, the thought you wanted to keep has already evaporated. And the notes you *do* manage to write rot in silos you never reopen. Keeping your own life shouldn't feel like data entry — it should feel like talking to someone who's paying attention.
+### 1. Install the plugin (once)
 
-## Why life-log
-
-- 🗣️ **Talk like a friend.** Vent a complaint, drop a quick note, think out loud — in one line, mid-sentence. No template, no tag, no "new entry" button.
-- 🗂️ **It files it for you.** Every message is classified into the right dated note — work, health, mood, people, learning, money, ideas, or life — timestamped `[YYYY-MM-DD HH:MM]`, and appended as one clean summary line.
-- 💡 **It gives you a suggestion, not just a record.** It notices patterns and offers a small, concrete next step when it helps — and stays quiet when a moment just needs to be heard.
-- 🕸️ **Impossible to lose a thought.** An independent safety-net hook mirrors every raw message to `_inbox.md` before Claude ever files it. Even if a filing is missed, the original is already on disk.
-- 🔮 **Month-end review.** `/life-log:review` reads back a whole month across every domain at once and hands you the highlights, the patterns, and a few gentle suggestions.
-- 📄 **Just markdown, just yours.** Grep-able, Obsidian-compatible, editable in any text editor. Nothing proprietary, nothing to export.
-- 🔒 **Local-first by design.** No cloud, no account, no telemetry. See [Privacy](#-privacy--local-first).
-
-## Install
-
-From inside Claude Code:
+From inside Claude Code, run:
 
 ```text
 /plugin marketplace add yuki4266/life-log
@@ -40,30 +28,36 @@ From inside Claude Code:
 
 > `yuki4266/life-log` is the GitHub repo you add as a marketplace; `yuki-tools` is the marketplace's name and `life-log` is the plugin inside it — hence `life-log@yuki-tools`.
 
-Then open a **new, empty folder** and scaffold it:
+**Requirements:** Claude Code, and `jq` recommended for the safety-net hook — it degrades gracefully without it (falls back to `perl`).
+
+### 2. Create your log folder (once)
+
+Make a new, empty folder, open Claude Code in it, and run:
 
 ```text
 /life-log:setup
 ```
 
-This creates the 8 category files, a `CLAUDE.md` carrying the always-on recording rules, and a `.life-log` marker that scopes the safety-net hook to this folder only.
+That scaffolds everything you need — and **never overwrites files that already exist**, so it's safe to re-run:
 
-Now just talk.
+- **8 category notes** — `work` · `health` · `mood` · `people` · `learning` · `money` · `ideas` · `life`
+- **`CLAUDE.md`** — the always-on recording rules (this is what makes every future message auto-file)
+- **`.life-log`** — a marker that scopes the safety-net hook to *this* folder only
+- **`_inbox.md`** — a raw backup of every message (created on your first message)
 
-**Requirements:** Claude Code, and `jq` recommended for the safety-net hook — it degrades gracefully without it (falls back to `perl`).
+### 3. Just talk
 
-## Quick start
-
-Once your folder is set up, there's nothing to learn. Talk:
+From now on, anything you say in that folder is classified, timestamped, filed, and answered — **you never say "log this."** A single message can land in more than one note.
 
 ```text
+you ›  ran 5k this morning, felt great
+  → health.md  - [2025-03-10 08:12] Ran 5k; felt great
+  "Nice — great way to start the day."
+
 you ›  rough day, kind of argued with a friend
   → mood.md    - [2025-03-10 21:40] Rough day; feeling off
   → people.md  - [2025-03-10 21:40] Friction with a friend
-  "Sorry, that sounds draining. Filed under both — want to talk it through?"
-
-you ›  shipped the auth refactor, finally
-  → work.md    - [2025-03-10 18:03] Shipped the auth refactor
+  "Sorry, that sounds draining — want to talk it through?"
 
 you ›  spent ~$40 on groceries
   → money.md   - [2025-03-10 19:50] Groceries ~$40
@@ -72,7 +66,47 @@ you ›  idea: a CLI that reads my commit history back to me as a story
   → ideas.md   - [2025-03-10 22:10] Idea — CLI narrating commit history as a story
 ```
 
-*(All example data.)*
+*(All example data.)* Want a new category? Just make a file (e.g. `travel.md`) and add it to the list in `CLAUDE.md` — see [Configuration](#configuration).
+
+### 4. Look back — `/life-log:review`
+
+When you want to reflect, ask for a review:
+
+```text
+/life-log:review              # the current month
+/life-log:review last week
+/life-log:review June
+```
+
+It reads your notes across **every domain at once**, then hands you the highlights, the patterns worth noticing, and a few gentle, concrete suggestions — saved to `reviews/<period>.md`.
+
+### Where everything lives
+
+Everything is plain markdown in your folder — yours to grep, `git`, edit in Obsidian, or delete:
+
+| File / folder | What it is |
+|---|---|
+| `work.md`, `health.md`, … | Your filed entries, one line each |
+| `_inbox.md` | Raw backup of every message (the safety net) |
+| `reviews/` | Your month/week reviews |
+| `CLAUDE.md` | The recording rules — edit to change categories or tone |
+| `.life-log` | Marker that turns the folder into a life-log |
+
+---
+
+## The problem
+
+Journaling apps demand a ritual: open the app, pick a template, fill the fields, tag it, save it. By the time you've done all that, the thought you wanted to keep has already evaporated. And the notes you *do* manage to write rot in silos you never reopen. Keeping your own life shouldn't feel like data entry — it should feel like talking to someone who's paying attention.
+
+## Why life-log
+
+- 🗣️ **Talk like a friend.** Vent a complaint, drop a quick note, think out loud — in one line, mid-sentence. No template, no tag, no "new entry" button.
+- 🗂️ **It files it for you.** Every message is classified into the right dated note, timestamped `[YYYY-MM-DD HH:MM]`, and appended as one clean summary line.
+- 💡 **It gives you a suggestion, not just a record.** It notices patterns and offers a small, concrete next step when it helps — and stays quiet when a moment just needs to be heard.
+- 🕸️ **Impossible to lose a thought.** An independent safety-net hook mirrors every raw message to `_inbox.md` before Claude ever files it. Even if a filing is missed, the original is already on disk.
+- 🔮 **Month-end review.** `/life-log:review` reads back a whole month across every domain at once and hands you the highlights, the patterns, and a few gentle suggestions.
+- 📄 **Just markdown, just yours.** Grep-able, Obsidian-compatible, editable in any text editor. Nothing proprietary, nothing to export.
+- 🔒 **Local-first by design.** No cloud, no account, no telemetry. See [Privacy](#-privacy--local-first).
 
 ## Skills
 
@@ -126,7 +160,6 @@ Everything is plain files you can edit.
 - **Add or rename a category.** Create or rename the `.md` file (e.g. `travel.md`), then add it to the category list in your folder's `CLAUDE.md` so Claude knows to file into it.
 - **Change the tone.** The recording rules in `CLAUDE.md` describe how Claude replies. Want it drier, funnier, quieter, more or less advice? Edit that description in plain English.
 - **File locations.** All notes, `_inbox.md`, `CLAUDE.md`, and the `.life-log` marker live in your logging folder. Move the folder and the whole log comes with it.
-- **The default categories:** `work` · `health` · `mood` · `people` · `learning` · `money` · `ideas` · `life` (the catch-all).
 
 ## Contributing
 
