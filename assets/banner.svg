@@ -1,45 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="260" viewBox="0 0 880 260" font-family="'Quicksand','Comic Sans MS','Trebuchet MS',sans-serif">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FFF1F4"/>
-      <stop offset="1" stop-color="#F1EDFF"/>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDF8EE"/>
+      <stop offset="1" stop-color="#FAF0DF"/>
     </linearGradient>
   </defs>
 
-  <!-- soft rounded backdrop -->
-  <rect x="0" y="0" width="880" height="260" rx="28" fill="url(#bg)"/>
+  <!-- diary page -->
+  <rect x="0" y="0" width="880" height="260" rx="22" fill="url(#paper)" stroke="#EBDAC2" stroke-width="2"/>
 
-  <!-- sparkles -->
-  <g fill="#FFD98A">
-    <path d="M150 60 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/>
-    <path d="M726 78 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z"/>
-  </g>
-  <g fill="#FF9EB5">
-    <path d="M712 150 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z"/>
-    <path d="M168 168 l2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5 z"/>
-  </g>
-
-  <!-- mascot: a happy little notebook -->
-  <g>
-    <!-- body -->
-    <rect x="399" y="36" width="82" height="92" rx="16" fill="#FFDCCB" stroke="#FFB49A" stroke-width="2.5"/>
-    <!-- spine -->
-    <rect x="399" y="36" width="15" height="92" rx="7.5" fill="#FFB49A"/>
-    <!-- heart bookmark -->
-    <path d="M470 30 c2.4-3 8-1.6 8 2.2 c0 3.4-5.6 6.6-8 8 c-2.4-1.4-8-4.6-8-8 c0-3.8 5.6-5.2 8-2.2 z" fill="#FF7E9B"/>
-    <!-- cheeks -->
-    <ellipse cx="428" cy="94" rx="6" ry="4" fill="#FF9EB5" opacity="0.55"/>
-    <ellipse cx="462" cy="94" rx="6" ry="4" fill="#FF9EB5" opacity="0.55"/>
-    <!-- eyes -->
-    <circle cx="431" cy="82" r="4" fill="#6E5A77"/>
-    <circle cx="459" cy="82" r="4" fill="#6E5A77"/>
-    <!-- smile -->
-    <path d="M432 90 q13 12 26 0" fill="none" stroke="#6E5A77" stroke-width="3" stroke-linecap="round"/>
+  <!-- ruled lines -->
+  <g stroke="#D8E3F1" stroke-width="1.2" opacity="0.8">
+    <line x1="96" y1="86" x2="812" y2="86"/>
+    <line x1="96" y1="118" x2="812" y2="118"/>
+    <line x1="96" y1="150" x2="812" y2="150"/>
+    <line x1="96" y1="182" x2="812" y2="182"/>
+    <line x1="96" y1="214" x2="812" y2="214"/>
   </g>
 
-  <!-- wordmark -->
-  <text x="440" y="184" text-anchor="middle" font-size="54" font-weight="700" fill="#6E5A93" letter-spacing="1">life·log</text>
+  <!-- pink margin line -->
+  <line x1="96" y1="34" x2="96" y2="226" stroke="#F2B4C2" stroke-width="1.6"/>
 
-  <!-- tagline -->
-  <text x="440" y="214" text-anchor="middle" font-size="18" fill="#9A8FA8">the life log you just talk to</text>
+  <!-- ring-binder holes -->
+  <g fill="#FFFFFF" stroke="#E6D5BD" stroke-width="1.5">
+    <circle cx="54" cy="76" r="7"/>
+    <circle cx="54" cy="130" r="7"/>
+    <circle cx="54" cy="184" r="7"/>
+  </g>
+
+  <!-- washi tape (top-left) -->
+  <g transform="rotate(-9 150 40)">
+    <rect x="92" y="22" width="116" height="34" fill="#A9E1CB" opacity="0.7"/>
+    <rect x="92" y="22" width="116" height="34" fill="none" stroke="#8FD4B8" stroke-width="1" opacity="0.5"/>
+  </g>
+
+  <!-- ribbon bookmark (top-right) -->
+  <path d="M772 0 h30 v92 l-15 -13 -15 13 z" fill="#FF9E8E"/>
+  <path d="M772 0 h8 v84 l-8 7 z" fill="#FFB4A6" opacity="0.7"/>
+
+  <!-- title, written on the line -->
+  <text x="454" y="150" text-anchor="middle" font-size="54" font-weight="700" fill="#6E5A93" letter-spacing="1">life·log</text>
+
+  <!-- little heart doodle -->
+  <path d="M598 120 c3-3.6 10-2 10 2.8 c0 4.2-7 8.2-10 10 c-3-1.8-10-5.8-10-10 c0-4.8 7-6.4 10-2.8 z" fill="#FF8FA8"/>
+
+  <!-- subtitle -->
+  <text x="454" y="182" text-anchor="middle" font-size="17" fill="#A98F82">the little diary you just talk to</text>
+
+  <!-- doodle smiley, like ink on the page -->
+  <circle cx="726" cy="206" r="14" fill="none" stroke="#C7A9E8" stroke-width="2.4"/>
+  <circle cx="721" cy="203" r="1.9" fill="#8E74B8"/>
+  <circle cx="731" cy="203" r="1.9" fill="#8E74B8"/>
+  <path d="M720 209 q6 5 12 0" fill="none" stroke="#8E74B8" stroke-width="2" stroke-linecap="round"/>
 </svg>
