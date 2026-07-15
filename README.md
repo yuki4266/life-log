@@ -1,18 +1,25 @@
-# life-log
+<div align="center">
 
-*The life log you just talk to.*
+<img src="assets/banner.svg" alt="life-log — the life log you just talk to" width="100%">
 
-![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-8A2BE2.svg)
-![Version 0.1.0](https://img.shields.io/badge/version-0.1.0-brightgreen.svg)
+<br><br>
 
-**Talk to Claude Code like a friend — a complaint, or a quick note — and it does two things at once: quietly files what you said into the right dated note, and says something useful back.** No app. No forms. No schema. Just talk.
+**🫶 Talk to Claude Code like a friend — a grumble, a tiny win, a passing thought — and it quietly tucks it into the right note and says something kind back.**
 
----
+*No app. No forms. No schema. Just talk.* ✨
 
-![life-log demo — a takeout complaint gets filed into money.md and mood.md with a suggestion; a shipped feature gets logged as a win](assets/demo.svg)
+![License: MIT](https://img.shields.io/badge/license-MIT-C9A9E8?style=flat&labelColor=6E5A93)
+![Works with Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-FFB182?style=flat&labelColor=C9743E)
+![Version](https://img.shields.io/badge/version-0.1.0-8FD6A8?style=flat&labelColor=4E9A6B)
+![Local first](https://img.shields.io/badge/local--first-no%20cloud-FF9EB5?style=flat&labelColor=C94F6D)
 
-*Example only — not real entries.*
+<br>
+
+<img src="assets/demo.svg" alt="a cozy chat — a takeout grumble gets tucked into money and mood notes with a gentle suggestion, and a shipped feature gets logged as a win" width="90%">
+
+<sub>💛 Example only — not real entries.</sub>
+
+</div>
 
 ## How to use
 

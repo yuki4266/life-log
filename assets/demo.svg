@@ -1,38 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="880" height="460" viewBox="0 0 880 460" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
-  <!-- window -->
-  <rect x="0" y="0" width="880" height="460" rx="12" fill="#0d1117"/>
-  <rect x="0" y="0" width="880" height="40" rx="12" fill="#161b22"/>
-  <rect x="0" y="28" width="880" height="12" fill="#161b22"/>
-  <!-- traffic lights -->
-  <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
-  <circle cx="46" cy="20" r="6" fill="#ffbd2e"/>
-  <circle cx="68" cy="20" r="6" fill="#27c93f"/>
-  <text x="440" y="25" text-anchor="middle" fill="#6e7681" font-size="13">life-log — ~/journal</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="516" viewBox="0 0 880 516" font-family="'Quicksand','Comic Sans MS','Trebuchet MS',sans-serif" font-size="15">
+  <!-- card -->
+  <rect x="0" y="0" width="880" height="516" rx="22" fill="#FFFBF7" stroke="#F1E7DE" stroke-width="2"/>
+  <!-- title bar (rounded top only) -->
+  <rect x="1" y="1" width="878" height="52" rx="21" fill="#FFE7DD"/>
+  <rect x="1" y="30" width="878" height="23" fill="#FFE7DD"/>
+  <!-- little heart + wordmark -->
+  <path d="M40 20 c3-3.6 10-2 10 2.8 c0 4.2-7 8.2-10 10 c-3-1.8-10-5.8-10-10 c0-4.8 7-6.4 10-2.8 z" fill="#FF7E9B"/>
+  <text x="64" y="35" font-size="20" font-weight="700" fill="#6E5A93">life·log</text>
 
-  <!-- exchange 1 -->
-  <text x="28" y="80">
-    <tspan fill="#58a6ff" font-weight="bold">you ›</tspan><tspan fill="#c9d1d9">  ugh, ordered takeout again — third time this week</tspan>
-  </text>
+  <!-- ===== exchange 1 ===== -->
+  <!-- user bubble (right side; text left-anchored so it renders identically everywhere) -->
+  <rect x="470" y="72" width="378" height="44" rx="18" fill="#FFC3B2"/>
+  <text x="492" y="100" fill="#6E4A44">ugh, takeout again this week</text>
 
-  <text x="28" y="132">
-    <tspan fill="#3fb950">  ✎ money.md</tspan><tspan fill="#6e7681">   - [2025-03-10 21:12] Overspent on takeout (3rd time this week)</tspan>
-  </text>
-  <text x="28" y="158">
-    <tspan fill="#3fb950">  ✎ mood.md</tspan><tspan fill="#6e7681">    - [2025-03-10 21:12] Frustrated with spending habits</tspan>
-  </text>
+  <!-- note card: money -->
+  <rect x="32" y="132" width="344" height="48" rx="13" fill="#FFF2EA" stroke="#FFD9C4" stroke-width="1.5"/>
+  <rect x="32" y="132" width="9" height="48" rx="4.5" fill="#FFB182"/>
+  <text x="54" y="153" font-size="12.5" font-weight="700" fill="#C9743E">money.md</text>
+  <text x="54" y="171" font-size="13" fill="#8A7B72">Overspent on takeout (3×)</text>
 
-  <text x="28" y="210" fill="#adbac7">  Filed under money and mood. Gentle nudge: takeout has come up</text>
-  <text x="28" y="236" fill="#adbac7">  a few times lately — want me to tally this month's food spend</text>
-  <text x="28" y="262" fill="#adbac7">  so you can see the number before deciding anything?</text>
+  <!-- note card: mood -->
+  <rect x="32" y="190" width="344" height="48" rx="13" fill="#F1ECFC" stroke="#E1D6F7" stroke-width="1.5"/>
+  <rect x="32" y="190" width="9" height="48" rx="4.5" fill="#C3A9EE"/>
+  <text x="54" y="211" font-size="12.5" font-weight="700" fill="#7C5CB0">mood.md</text>
+  <text x="54" y="229" font-size="13" fill="#8A7B72">Frustrated with spending</text>
 
-  <!-- exchange 2 -->
-  <text x="28" y="314">
-    <tspan fill="#58a6ff" font-weight="bold">you ›</tspan><tspan fill="#c9d1d9">  finally shipped the login refactor</tspan>
-  </text>
+  <!-- assistant bubble -->
+  <rect x="32" y="250" width="628" height="70" rx="18" fill="#E6F5EE"/>
+  <text x="54" y="279" fill="#4E6B5E">Filed under money &amp; mood. Want me to tally this month's</text>
+  <text x="54" y="303" fill="#4E6B5E">food spend so you can see the number first?</text>
+  <path d="M642 268 c2.2-2.6 7.2-1.4 7.2 2 c0 3-5 5.8-7.2 7.2 c-2.2-1.4-7.2-4.2-7.2-7.2 c0-3.4 5-4.6 7.2-2 z" fill="#FF9EB5"/>
 
-  <text x="28" y="366">
-    <tspan fill="#3fb950">  ✎ work.md</tspan><tspan fill="#6e7681">    - [2025-03-10 22:05] Shipped the login refactor</tspan>
-  </text>
+  <!-- ===== exchange 2 ===== -->
+  <!-- user bubble -->
+  <rect x="470" y="342" width="378" height="44" rx="18" fill="#FFC3B2"/>
+  <text x="492" y="370" fill="#6E4A44">finally shipped the login refactor!</text>
 
-  <text x="28" y="418" fill="#adbac7">  A real win — logged it so the month-end review celebrates it too.</text>
+  <!-- note card: work -->
+  <rect x="32" y="402" width="344" height="48" rx="13" fill="#E9F6EE" stroke="#CDEBD8" stroke-width="1.5"/>
+  <rect x="32" y="402" width="9" height="48" rx="4.5" fill="#8FD6A8"/>
+  <text x="54" y="423" font-size="12.5" font-weight="700" fill="#4E9A6B">work.md</text>
+  <text x="54" y="441" font-size="13" fill="#7C8A80">Shipped the login refactor</text>
+
+  <!-- assistant bubble -->
+  <rect x="32" y="460" width="712" height="44" rx="18" fill="#E6F5EE"/>
+  <text x="54" y="488" fill="#4E6B5E">yay — a real win! logged it so your month-end review celebrates it too.</text>
 </svg>
