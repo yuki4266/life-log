@@ -31,49 +31,49 @@ EOF
 
 # --- category files ---
 new_file "work.md" <<'EOF'
-# 工作 Work
+# Work
 
 <!-- work / career / projects · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "health.md" <<'EOF'
-# 健康 Health
+# Health
 
-<!-- health / fitness / body / symptoms · format: - [YYYY-MM-DD HH:MM] content -->
+<!-- body / fitness / symptoms / sleep / food · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "mood.md" <<'EOF'
-# 心情 Mood
+# Mood
 
 <!-- feelings / emotions · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "people.md" <<'EOF'
-# 人际 People
+# People
 
 <!-- relationships / family / friends · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "learning.md" <<'EOF'
-# 学习 Learning
+# Learning
 
 <!-- study / growth / reading · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "money.md" <<'EOF'
-# 财务 Money
+# Money
 
 <!-- finance / spending / investing · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "ideas.md" <<'EOF'
-# 想法 Ideas
+# Ideas
 
 <!-- ideas / inspiration / plans · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
 
 new_file "life.md" <<'EOF'
-# 生活 Life
+# Life
 
 <!-- everyday / catch-all · format: - [YYYY-MM-DD HH:MM] content -->
 EOF
@@ -81,17 +81,18 @@ EOF
 new_file "README.md" <<'EOF'
 # My Life Log
 
-A running log of my life, kept by talking to Claude Code.
+A running log of my life, kept by talking to Claude Code like a friend.
 
 ## How to use
 
-Just tell me anything — I'll classify it, timestamp it, and file it into the
-right note. You never have to say "log this".
+Just tell me anything — a complaint, a small win, a passing thought. I'll
+classify it, timestamp it, file it into the right note, and say something useful
+back. You never have to say "log this".
 
 | File | For |
 |------|-----|
 | work.md | work / career / projects |
-| health.md | health / fitness / body |
+| health.md | body / fitness / health |
 | mood.md | feelings / emotions |
 | people.md | relationships / family / friends |
 | learning.md | study / growth / reading |
@@ -110,8 +111,9 @@ EOF
 read -r -d '' RULES <<'EOF'
 ## Life-log rules
 
-This is a **life-log** project. On **every** message the user sends — whether or
-not they say "log it":
+This is a **life-log** project. The user talks to you like a friend — a
+complaint, a small win, a passing thought. On **every** message they send —
+whether or not they say "log it":
 
 1. **Classify** it into a category file below (fall back to `life.md`). One
    message may span several files — record it in each relevant one.
@@ -120,8 +122,10 @@ not they say "log it":
 3. **Append** one line to each relevant file:
    `- [YYYY-MM-DD HH:MM] <summary>` — a clear, distilled summary you'll
    understand later, not a verbatim copy.
-4. **Answer the user normally.** Recording is a side action; always give a real,
-   thoughtful reply to what they actually said.
+4. **Reply like a friend, and offer a suggestion when it helps.** Answer what
+   they actually said — warm and genuine. When there's something actionable (a
+   pattern worth noticing, a small next step, a bit of advice), offer it briefly.
+   Don't force advice onto a moment that just needs acknowledgement.
 
 Pure project-maintenance requests (e.g. "change a rule") don't need a category
 entry — the safety-net hook already keeps the raw copy in `_inbox.md`.
@@ -131,7 +135,7 @@ entry — the safety-net hook already keeps the raw copy in `_inbox.md`.
 | File | For |
 |------|-----|
 | `work.md` | work / career / projects |
-| `health.md` | health / fitness / body / symptoms |
+| `health.md` | body / fitness / health / symptoms |
 | `mood.md` | feelings / emotions |
 | `people.md` | relationships / family / friends |
 | `learning.md` | study / growth / reading |

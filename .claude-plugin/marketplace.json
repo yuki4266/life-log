@@ -7,7 +7,7 @@
     {
       "name": "life-log",
       "source": "./",
-      "description": "Tell it anything about your day — it files it into dated category notes and never loses a word.",
+      "description": "Talk to it like a friend — it auto-files your notes into dated category notes, gives suggestions, and never loses a word. Local-first markdown.",
       "version": "0.1.0"
     }
   ]

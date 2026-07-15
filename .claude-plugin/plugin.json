@@ -1,6 +1,6 @@
 {
   "name": "life-log",
-  "description": "A life-logging companion for Claude Code: tell it anything about your day and it classifies, timestamps, and files it into dated category notes — with a UserPromptSubmit safety-net hook so nothing you say is ever lost. Local-first, plain markdown, no cloud.",
+  "description": "Talk to Claude Code like a friend — a complaint or a quick note — and it auto-classifies, timestamps, and files each message into dated category notes, then gives you a suggestion. A UserPromptSubmit safety-net hook means nothing you say is ever lost. Local-first, plain markdown, no cloud.",
   "version": "0.1.0",
   "author": {
     "name": "yuki4266",

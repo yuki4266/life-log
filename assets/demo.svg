@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="460" viewBox="0 0 880 460" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15">
+  <!-- window -->
+  <rect x="0" y="0" width="880" height="460" rx="12" fill="#0d1117"/>
+  <rect x="0" y="0" width="880" height="40" rx="12" fill="#161b22"/>
+  <rect x="0" y="28" width="880" height="12" fill="#161b22"/>
+  <!-- traffic lights -->
+  <circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="46" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="68" cy="20" r="6" fill="#27c93f"/>
+  <text x="440" y="25" text-anchor="middle" fill="#6e7681" font-size="13">life-log — ~/journal</text>
+
+  <!-- exchange 1 -->
+  <text x="28" y="80">
+    <tspan fill="#58a6ff" font-weight="bold">you ›</tspan><tspan fill="#c9d1d9">  ugh, ordered takeout again — third time this week</tspan>
+  </text>
+
+  <text x="28" y="132">
+    <tspan fill="#3fb950">  ✎ money.md</tspan><tspan fill="#6e7681">   - [2025-03-10 21:12] Overspent on takeout (3rd time this week)</tspan>
+  </text>
+  <text x="28" y="158">
+    <tspan fill="#3fb950">  ✎ mood.md</tspan><tspan fill="#6e7681">    - [2025-03-10 21:12] Frustrated with spending habits</tspan>
+  </text>
+
+  <text x="28" y="210" fill="#adbac7">  Filed under money and mood. Gentle nudge: takeout has come up</text>
+  <text x="28" y="236" fill="#adbac7">  a few times lately — want me to tally this month's food spend</text>
+  <text x="28" y="262" fill="#adbac7">  so you can see the number before deciding anything?</text>
+
+  <!-- exchange 2 -->
+  <text x="28" y="314">
+    <tspan fill="#58a6ff" font-weight="bold">you ›</tspan><tspan fill="#c9d1d9">  finally shipped the login refactor</tspan>
+  </text>
+
+  <text x="28" y="366">
+    <tspan fill="#3fb950">  ✎ work.md</tspan><tspan fill="#6e7681">    - [2025-03-10 22:05] Shipped the login refactor</tspan>
+  </text>
+
+  <text x="28" y="418" fill="#adbac7">  A real win — logged it so the month-end review celebrates it too.</text>
+</svg>
