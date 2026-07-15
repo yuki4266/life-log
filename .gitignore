@@ -1,0 +1,16 @@
+# This repo ships the life-log MECHANISM only — never anyone's actual log data.
+# Guard against accidentally committing personal entries if you test in-tree.
+_inbox.md
+.life-log
+/work.md
+/health.md
+/mood.md
+/people.md
+/learning.md
+/money.md
+/ideas.md
+/life.md
+
+# OS / editor cruft
+.DS_Store
+*.swp

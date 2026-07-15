@@ -1,0 +1,14 @@
+{
+  "name": "yuki-tools",
+  "owner": {
+    "name": "yuki4266"
+  },
+  "plugins": [
+    {
+      "name": "life-log",
+      "source": "./",
+      "description": "Tell it anything about your day — it files it into dated category notes and never loses a word.",
+      "version": "0.1.0"
+    }
+  ]
+}
